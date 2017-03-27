@@ -139,6 +139,7 @@ section.iframe iframe {
   height: 80vh;
 
   pointer-events: none;
+  border: none;
 }
 
 a.facebook {
