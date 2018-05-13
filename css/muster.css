@@ -1,7 +1,7 @@
-@import url('https://fonts.googleapis.com/css?family=Raleway:200,200i,500,700,700i');
+@import url('https://fonts.googleapis.com/css?family=Oswald:200,700');
 
 html, body {
-  font-family: 'Raleway', sans-serif;
+  font-family: sans-serif;
   font-size: 18pt;
   font-weight: 200;
 }
@@ -123,26 +123,67 @@ section.text {
 section.text p {
   text-align: center;
 }
-section.text.dark {
+section.dark {
   background: #222;
   color: #fff;
 }
-section.text .butwaittheresmore {
 
-}
-
-section.iframe {
-  min-height: 60vh;
-  box-sizing: border-box;
-
+section.links {
   display: flex;
-  align-items: center;
+  flex-wrap: wrap;
   justify-content: center;
 }
-section.iframe iframe {
-  width: 100%;
-  height: 80vh;
+section.links .link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  position: relative;
+
+  width: 300px;
+  height: 300px;
+}
+section.links .link a {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 300px;
+  height: 300px;
+
+  color: #FFF;
   border: none;
+  text-align: center;
+
+  background-color: rgba(0,0,0, 0.2);
+  transition: background-color .15s;
+}
+section.links .link a p {
+  font-family: 'Oswald';
+  text-transform: uppercase;
+  font-size: 1.5em;
+  font-weight: 200;
+  text-shadow: 0 0 30px rgba(0,0,0, 1.0);
+  margin: 0;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+section.links .link a:hover {
+  background-color: rgba(0,0,0, 0.0);
+  transition: background-color .15s;
+}
+section.links .link a p {
+  pointer-events: none;
+}
+section.links .link.videobg video {
+  width: 100%;
+  height: 100%;
+}
+section.links .link.black-text a {
+  color: #000;
 }
 
 a.spotify {
@@ -150,14 +191,6 @@ a.spotify {
   background-color: #2ebd59;
   border: none;
   font-weight: 200;
-}
-a.facebook {
-  color: #3b5998;
-  border-color: #3b5998;
-}
-a.twitter {
-  color: #009eed;
-  border-color: #009eed;
 }
 a.linkedin {
   color: #0077b5;

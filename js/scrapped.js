@@ -12,6 +12,15 @@ document.addEventListener('DOMContentLoaded', function () {
       });
     }
   );
+  const videoLinks = document.querySelectorAll('.link.videobg');
+  videoLinks.forEach((link) => {
+    link.addEventListener('mouseover', (e) => {
+      e.target.parentElement.querySelector('video').play();
+    }, false);
+    link.addEventListener('mouseout', (e) => {
+      e.target.parentElement.querySelector('video').pause();
+    }, false);
+  });
 });
 document.addEventListener('scroll', setNavBg);
 
